@@ -15,5 +15,4 @@ class Curandera extends Personaje {
         }
     }
 }
-
 module.exports = Curandera;
