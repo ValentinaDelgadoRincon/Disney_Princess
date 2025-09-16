@@ -6,8 +6,10 @@ class Curandera extends Personaje {
         this.poderSanacion = 50;
     }
 
-    sanarAliado(aliado) {
-        aliado.recibirCuracion(this.poderSanacion);
+  sanarAliado(aliado) {
+        aliado.curarse(this.poderSanacion);
         console.log(`${this.nombre} sana a ${aliado.nombre} con ${this.poderSanacion} puntos de vida.`);
     }
+    
+} 
 }
