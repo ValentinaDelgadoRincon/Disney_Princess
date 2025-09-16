@@ -1,5 +1,4 @@
-import Personaje from "./Personaje.js";
-
+const Personaje = require ('./Personaje');
 class Guerrera extends Personaje {
     constructor(nivel = 1, inventario = []) {
         super("Mulán", nivel, 60, 100, 130, "Espíritu del Dragón", "Espada Imperial", inventario);
