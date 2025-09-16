@@ -1,0 +1,31 @@
+{
+  "name": "disney_princess",
+  "version": "1.0.0",
+  "description": "Aplicacion de consola de batallas RPG que simula batallas entre algunas princesas contra diferentes villanos de Disney",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinaDelgadoRincon/Disney_Princess.git"
+  },
+  "keywords": [
+    "princesas",
+    "villanos",
+    "ganador",
+    "batalla",
+    "puntos",
+    "poder",
+    "ataque",
+    "vida",
+    "objetos",
+    "magicos"
+  ],
+  "author": "Camila y Valentina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValentinaDelgadoRincon/Disney_Princess/issues"
+  },
+  "homepage": "https://github.com/ValentinaDelgadoRincon/Disney_Princess#readme"
+}
