@@ -1,4 +1,4 @@
-const Personaje = require ('./Personaje');
+const Personaje = require('./Personaje');
 
 class Curandera extends Personaje {
     constructor(nivel = 1, inventario = []) {
@@ -6,10 +6,15 @@ class Curandera extends Personaje {
         this.poderSanacion = 50;
     }
 
-  sanarAliado(aliado) {
-        aliado.curarse(this.poderSanacion);
-        console.log(`${this.nombre} sana a ${aliado.nombre} con ${this.poderSanacion} puntos de vida.`);
+    sanarAliado(aliado) {
+        if (typeof aliado.curarse === "function") {
+            aliado.curarse(this.poderSanacion);
+            console.log(`${this.nombre} sana a ${aliado.nombre} con ${this.poderSanacion} puntos de vida.`);
+        } else {
+            console.log(`${aliado.nombre} no puede ser sanado.`);
+        }
     }
-    
-} 
+}
+
+module.exports = Curandera;
 
