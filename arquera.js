@@ -1,4 +1,4 @@
-const Personaje = require ('./Personaje');
+import Personaje from "./Personaje.js";
 class Arquera extends Personaje {
     constructor(nivel = 1, inventario = []) {
         super("Mérida", nivel, 40, 90, 110, "Tiro Certero", "Arco Encantado", inventario);
