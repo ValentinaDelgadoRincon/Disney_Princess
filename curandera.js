@@ -12,4 +12,4 @@ class Curandera extends Personaje {
     }
     
 } 
-}
+
