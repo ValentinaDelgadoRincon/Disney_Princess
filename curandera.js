@@ -1,4 +1,4 @@
-import Personaje from "./Personaje.js";
+const Personaje = require ('./Personaje');
 
 class Curandera extends Personaje {
     constructor(nivel = 1, inventario = []) {
