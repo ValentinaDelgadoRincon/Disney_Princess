@@ -146,3 +146,32 @@ function verPersonajes(){
     }
     
 }
+
+
+function iniciarBatalla(){
+
+    const princesas= personajes.filter(p=>p.tipo!=='Villano');
+    const villano= personajes.filter(p=>p.tipo==='Villano');
+
+    if(personajes.length < 2){
+        console.log("Se necesitan al menos dos personajes");
+        menu();
+        return
+    }
+
+    inquirer.prompt([{
+        type:'list',
+        name:'primerPersonaje',
+        message:'Escoja el primer personaje:',
+        choices:princesas.map(p=>p.nombre)
+    },{
+        type:'list',
+        name:'segundoPersonaje',
+        message:'Escoja el segundo personaje:',
+        choices:villano.map(p=>p.nombre) 
+    }
+])
+
+console.log(`La batalla entre ${primerPersonaje.nombre}`)
+    }
+    
