@@ -1,7 +1,11 @@
+const Personaje = require('./Personaje');
+const IMagico = require('./IMagico');
+
 class Maga extends Personaje{
-    constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario,magia){
+    constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario=[],magia=30,experiencia){
         super(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario);
         this.magia = magia;
+        this.experiencia = 0;
     }
     usarPoder() {
         console.log(`${this.nombre} ha usado su poder `);
@@ -37,6 +41,16 @@ class Maga extends Personaje{
             console.log(`${this.nombre} ha subido al nivel ${this.nivel}`);
         }
     }
+
+    usarMagia(villano){
+        let danio= this.poder + 30;
+        console.log(`${this.nombre} usa magia contra ${villano.nombre} y causa ${danio}`)
+    }
+
+    recargarMagia(){
+        this.magia=100;
+        console.log(`${this.nombre} recargó su magia al máximo`)
+    }
 }
 
-//revisar IMagico
+module.exports=Maga;
