@@ -1,4 +1,4 @@
-# 👑✨ Disney Princess Battle Arena ✨👑
+# 👑✨ Disney Princess Game ✨👑
 
 ![Princesas Disney](./multimedia/Princesas-disney.webp)
 
