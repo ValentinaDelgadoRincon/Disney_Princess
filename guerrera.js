@@ -36,3 +36,4 @@ class Guerrera extends Personaje {
 }
 
 module.exports = Guerrera;
+
