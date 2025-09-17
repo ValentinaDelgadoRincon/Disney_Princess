@@ -2,7 +2,7 @@ const Personaje = require('./Personaje');
 const IMagico = require('./IMagico');
 
 class Maga extends Personaje{
-    constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario=[],magia=30,experiencia){
+    constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario=[],magia=30){
         super(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario);
         this.magia = magia;
         this.experiencia = 0;
@@ -26,7 +26,7 @@ class Maga extends Personaje{
     }
 
     curarse(cantidad){
-        this.vida += Math.min(this.vida + cantidad,100);
+        this.vida = Math.min(this.vida + cantidad, 100);
         if(this.vida === 100){
             console.log("Ya tienes la vida completa, no puedes curate más");
         }else{
@@ -44,6 +44,7 @@ class Maga extends Personaje{
 
     usarMagia(villano){
         let danio= this.poder + 30;
+        villano.recibirDanio(danio)
         console.log(`${this.nombre} usa magia contra ${villano.nombre} y causa ${danio}`)
     }
 

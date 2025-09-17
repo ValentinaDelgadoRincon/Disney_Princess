@@ -54,6 +54,14 @@ class Personaje{
         return this.#invetario;
     }
 
+    set vida(valor){
+        this.#vida = Math.max(0,Math.min(valor,100))
+    }
+
+    set nivel(valor){
+        this.#nivel = Math.max(1,valor)
+    }
+
     usarPoder(){
         throw new Error("El método debe implementarse en las clases hijas")
     }
@@ -74,3 +82,5 @@ class Personaje{
         throw new Error("El método debe implementarse en las clases hijas")
     }
 }
+
+module.exports= Personaje;
