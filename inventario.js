@@ -1,4 +1,4 @@
-const ObjetoMagico = require("./ObjetoMagico");
+const ObjetoMagico = require("./objetoMagico");
 
 class Inventario {
     constructor() {

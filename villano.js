@@ -1,5 +1,4 @@
-const Personaje= require('./personaje');
-
+const Personaje = require('./Personaje');
 class Villano extends Personaje {
     constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario, debilidad, nivelPeligro, resistencia) {
         super(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario);
