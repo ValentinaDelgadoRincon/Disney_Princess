@@ -4,6 +4,8 @@ const Villano = require('./villano');
 const Curandera = require('./curandera');
 const Arquera = require('./arquera');
 const Guerrera = require('./guerrera');
+const ObjetoMagico = require('./objetoMagico');
+const Inventario = require('./inventario')
 const chalk = require('chalk');
 let personajes = [];
 
@@ -195,10 +197,10 @@ function iniciarBatalla() {
 
         if (princesa.tipo === villanos.tipo) {
             console.log(chalk.hex('#FF1493')("¡Error! No puedes hacer pelear dos princesas"));
-             menu();
-             return;
+            menu();
+            return;
         }
-        if(villanos.tipo!=="Villano"){
+        if (villanos.tipo !== "Villano") {
             console.log(chalk.hex('#DA70D6')(`${villanos.nombre} no es un villano, no puedes iniciar la batalla`));
             menu();
             return;
@@ -221,6 +223,10 @@ function poderesPersonajes(personaje) {
     if (typeof personaje.ataqueEspada === 'function') poderes.push('Ataque con espada');
 
     if (typeof personaje.usarMagia === 'function') poderes.push('Usar magia');
+
+    if (personaje.invetario && personaje.invetario.objetos.length > 0) {
+        poderes.push("Usar objeto");
+    }
 
     return poderes;
 }
@@ -257,6 +263,20 @@ async function gestorBatalla(princesa, villano) {
                     break;
                 case 'Usar magia':
                     princesa.usarMagia(villano)
+                    break;
+                case 'Usar objeto':
+                    const objetos = personaje.inventario.objetos.map(o => o.nombre);
+                    if (objetos.length === 0) {
+                        console.log("No tienes objetos en tu inventario.");
+                    } else {
+                        const { objetoSeleccionado } = await inquirer.prompt([{
+                            type: 'list',
+                            name: 'objetoSeleccionado',
+                            message: 'Elige un objeto a usar:',
+                            choices: objetos
+                        }]);
+                        personaje.inventario.usarObjeto(objetoSeleccionado, personaje);
+                    }
                     break;
             }
             if (villano.vida <= 0) {

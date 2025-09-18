@@ -6,7 +6,7 @@ class Personaje{
     #vida
     #habilidadEspecial
     #objetoMagico
-    #invetario
+    #inventario
     
     constructor(nombre,nivel,poder,ataque,vida,habilidadEspecial,objetoMagico,inventario){
         if(this.constructor === Personaje){
@@ -19,7 +19,7 @@ class Personaje{
         this.#vida=vida;
         this.#habilidadEspecial=habilidadEspecial;
         this.#objetoMagico=objetoMagico;
-        this.#invetario=inventario;
+        this.#inventario=inventario;
     }
     
     get nombre(){
@@ -51,7 +51,7 @@ class Personaje{
     }
 
     get inventario(){
-        return this.#invetario;
+        return this.#inventario;
     }
 
     set vida(valor){
