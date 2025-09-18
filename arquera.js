@@ -1,4 +1,4 @@
-const Personaje = require('./Personaje');
+const Personaje = require('./personaje');
 
 class Arquera extends Personaje {
     constructor(nivel = 1, inventario = []) {

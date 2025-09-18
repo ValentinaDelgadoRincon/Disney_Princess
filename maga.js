@@ -1,4 +1,4 @@
-const Personaje = require('./Personaje');
+const Personaje = require('./personaje');
 const IMagico = require('./IMagico');
 
 class Maga extends Personaje{
