@@ -72,7 +72,7 @@ Desarrollar una **aplicación de consola interactiva** que simule batallas entre
 ---
 ## 🎥 Video de Presentación
 
-Puedes ver el video de presentación [aquí](acacolocasELVIDEO).
+Puedes ver el video de presentación [aquí](https://drive.google.com/file/d/1AbM49rhR0mBwTPzjaaqu17oilK614nse/view?usp=drivesdk).
 
 ## 📌 Diagrama UML
 *![UML Disney](./multimedia/umlprincessoff.webp)*
