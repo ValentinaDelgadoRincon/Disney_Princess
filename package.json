@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/ValentinaDelgadoRincon/Disney_Princess/issues"
   },
-  "homepage": "https://github.com/ValentinaDelgadoRincon/Disney_Princess#readme"
+  "homepage": "https://github.com/ValentinaDelgadoRincon/Disney_Princess#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.7"
+  }
 }

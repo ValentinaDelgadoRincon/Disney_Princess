@@ -2,9 +2,9 @@ const Personaje = require('./Personaje');
 const IMagico = require('./IMagico');
 
 class Maga extends Personaje{
-    constructor(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario=[],magia=30){
-        super(nombre, nivel, poder, ataque, vida, habilidadEspecial, objetoMagico, inventario);
-        this.magia = magia;
+    constructor(nivel = 1, inventario = []) {
+        super("Elsa", nivel, 20, 10, 100, "congelamiento", "copo de nieve", inventario);
+        this.magia = 30;
         this.experiencia = 0;
     }
     usarPoder() {

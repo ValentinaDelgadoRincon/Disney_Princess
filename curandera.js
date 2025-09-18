@@ -1,5 +1,4 @@
 const Personaje = require('./Personaje');
-const ISanar = require('./ISanar');
 
 class Curandera extends Personaje {
     constructor(nivel = 1, inventario = []) {
